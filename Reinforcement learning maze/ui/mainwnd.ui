@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="mainLayout">
+    <item row="1" column="1">
+     <layout class="QHBoxLayout" name="buttonsBar">
+      <item>
+       <widget class="QPushButton" name="playButton">
+        <property name="text">
+         <string>Play</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pauseButton">
+        <property name="text">
+         <string>Pause</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopButton">
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="restartButton">
+        <property name="text">
+         <string>Restart</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QSlider" name="speedSlider">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QGraphicsView" name="canvas"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Fi&amp;le</string>
+    </property>
+    <addaction name="actionLoad_environment"/>
+    <addaction name="actionSave_environment"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuMaze">
+    <property name="title">
+     <string>&amp;Maze</string>
+    </property>
+    <addaction name="actionBuild_new"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_maze"/>
+    <addaction name="actionSave_maze"/>
+   </widget>
+   <widget class="QMenu" name="menuAgent">
+    <property name="title">
+     <string>A&amp;gent</string>
+    </property>
+    <addaction name="actionShowSensors"/>
+    <addaction name="actionConfigAgent"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMaze"/>
+   <addaction name="menuAgent"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad_maze">
+   <property name="text">
+    <string>&amp;Load maze</string>
+   </property>
+  </action>
+  <action name="actionSave_maze">
+   <property name="text">
+    <string>&amp;Save maze</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionBuild_new">
+   <property name="text">
+    <string>&amp;Build new</string>
+   </property>
+  </action>
+  <action name="actionLoad_environment">
+   <property name="text">
+    <string>&amp;Load environment</string>
+   </property>
+  </action>
+  <action name="actionSave_environment">
+   <property name="text">
+    <string>&amp;Save environment</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionShowSensors">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Show sensors</string>
+   </property>
+  </action>
+  <action name="actionConfigAgent">
+   <property name="text">
+    <string>&amp;Configure agent</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
